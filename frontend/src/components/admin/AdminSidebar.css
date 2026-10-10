@@ -1,0 +1,440 @@
+/* =========================================
+   ADMIN SIDEBAR
+========================================= */
+
+.admin-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 270px;
+  height: 100vh;
+
+  background: #111827;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 2000;
+
+  overflow: hidden;
+
+  transform: translateX(0);
+
+  transition: transform 0.3s ease;
+
+  box-shadow:
+    8px 0 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   OPEN
+========================================= */
+
+.admin-sidebar.open {
+  transform: translateX(0);
+
+  pointer-events: auto;
+}
+
+
+/* =========================================
+   CLOSED
+========================================= */
+
+.admin-sidebar.closed {
+  transform: translateX(-100%);
+
+  pointer-events: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.admin-brand {
+  height: 78px;
+
+  padding: 0 18px 0 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   BRAND LEFT
+========================================= */
+
+.admin-brand-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.admin-brand-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 21px;
+
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   BRAND TEXT
+========================================= */
+
+.admin-brand-text h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.admin-brand-text span {
+  display: block;
+
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #64748b;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.admin-sidebar-close {
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.10);
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #94a3b8;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  flex-shrink: 0;
+}
+
+.admin-sidebar-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   NAV
+========================================= */
+
+.admin-nav {
+  flex: 1;
+
+  padding: 22px 13px;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.admin-nav-section {
+  margin-bottom: 22px;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+.admin-nav-item {
+  position: relative;
+
+  width: 100%;
+  min-height: 45px;
+
+  margin-bottom: 4px;
+  padding: 0 12px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #94a3b8;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  text-align: left;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+/* =========================================
+   ICON
+========================================= */
+
+.admin-nav-icon {
+  width: 23px;
+
+  min-width: 23px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 17px;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.admin-nav-label {
+  white-space: nowrap;
+
+  color: inherit;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.admin-nav-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+}
+
+.admin-nav-item:hover .admin-nav-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.admin-nav-item.active {
+  background: #2563eb;
+
+  color: #ffffff;
+}
+
+.admin-nav-item.active .admin-nav-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.admin-sidebar-bottom {
+  padding: 14px 13px 18px;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.08);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.admin-logout {
+  width: 100%;
+
+  min-height: 45px;
+
+  margin-top: 4px;
+
+  padding: 0 12px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #f87171;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.admin-logout:hover {
+  background: rgba(239, 68, 68, 0.10);
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.admin-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.admin-nav::-webkit-scrollbar-thumb {
+  background: #334155;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.admin-sidebar-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  z-index: 1900;
+
+  display: none;
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 901px) {
+
+  .admin-sidebar-overlay {
+    display: none !important;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admin-sidebar-overlay {
+    display: block;
+  }
+
+  .admin-sidebar {
+    width: 275px;
+
+    z-index: 2000;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .admin-sidebar {
+    width: 285px;
+  }
+
+}

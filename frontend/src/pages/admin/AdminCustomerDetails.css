@@ -1,0 +1,1228 @@
+/* =========================================================
+   AUTOGLOW - CUSTOMER DETAILS
+   Scoped Premium Admin Layout
+   ========================================================= */
+
+.customer-details-page {
+  --ag-primary: #2563eb;
+  --ag-primary-dark: #1d4ed8;
+  --ag-indigo: #4f46e5;
+  --ag-navy: #071426;
+  --ag-navy-2: #0b192d;
+  --ag-text: #172033;
+  --ag-muted: #667085;
+  --ag-border: #e6eaf0;
+  --ag-bg: #f5f7fb;
+
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: var(--ag-bg);
+  color: var(--ag-text);
+  display: block;
+  overflow-x: hidden;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================================
+   SIDEBAR - FIXED
+   ========================================================= */
+
+.customer-details-page .admin-sidebar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 260px !important;
+  min-width: 260px !important;
+  height: 100vh !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(59, 130, 246, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #061326 0%,
+      #0a172a 55%,
+      #071321 100%
+    ) !important;
+
+  color: white;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  overflow: hidden !important;
+
+  z-index: 9999 !important;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 8px 0 30px rgba(7, 20, 38, 0.08);
+
+  transform: none !important;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.customer-details-page .admin-brand {
+  height: 86px !important;
+  min-height: 86px !important;
+
+  margin: 0 !important;
+  padding: 20px !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.customer-details-page .admin-brand-icon {
+  width: 43px !important;
+  height: 43px !important;
+  min-width: 43px !important;
+
+  border-radius: 12px;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  ) !important;
+
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.customer-details-page .admin-brand h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #fff;
+
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.customer-details-page .admin-brand span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #8798b0;
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.customer-details-page .admin-nav {
+  flex: 1 !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 16px 12px !important;
+
+  display: block !important;
+
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.customer-details-page .admin-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.customer-details-page .admin-nav::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 10px;
+}
+
+.customer-details-page .admin-nav-item {
+  width: 100% !important;
+  height: 43px !important;
+
+  margin: 0 0 5px 0 !important;
+  padding: 0 13px !important;
+
+  border: 0 !important;
+  outline: none !important;
+
+  border-radius: 10px;
+
+  background: transparent !important;
+
+  color: #a9b7ca !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 12px;
+
+  font-size: 13px !important;
+  font-weight: 600;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.customer-details-page .admin-nav-item span {
+  width: 24px !important;
+  min-width: 24px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-size: 16px;
+}
+
+.customer-details-page .admin-nav-item:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #fff !important;
+
+  transform: translateX(2px);
+}
+
+.customer-details-page .admin-nav-item.active {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(37, 99, 235, 0.95),
+      rgba(79, 70, 229, 0.82)
+    ) !important;
+
+  color: #fff !important;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.customer-details-page .admin-nav-section {
+  margin: 0 !important;
+  padding: 17px 13px 8px !important;
+
+  color: #53657e !important;
+
+  font-size: 9px !important;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.customer-details-page .admin-sidebar-bottom {
+  width: 100% !important;
+
+  margin: 0 !important;
+  padding: 13px 12px 17px !important;
+
+  flex-shrink: 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.customer-details-page .admin-logout {
+  width: 100% !important;
+  height: 43px !important;
+
+  margin: 0 !important;
+
+  padding: 0 13px !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.035) !important;
+
+  color: #a9b7ca !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 12px;
+
+  font-size: 13px !important;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.customer-details-page .admin-logout:hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border-color: rgba(239, 68, 68, 0.2) !important;
+  color: #fff !important;
+}
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.customer-details-page .customer-details-main {
+  width: calc(100% - 260px) !important;
+  min-height: 100vh;
+
+  margin: 0 0 0 260px !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+
+  background: var(--ag-bg);
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.customer-details-page .customer-details-topbar {
+  width: 100% !important;
+  min-height: 86px !important;
+
+  margin: 0 !important;
+
+  padding: 18px 38px !important;
+
+  background: rgba(255, 255, 255, 0.96) !important;
+
+  border-bottom: 1px solid var(--ag-border);
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  position: sticky !important;
+  top: 0 !important;
+
+  z-index: 100;
+
+  backdrop-filter: blur(14px);
+}
+
+.customer-details-page .customer-back-btn {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+  background: transparent !important;
+
+  color: #64748b !important;
+
+  font-size: 12px !important;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.customer-details-page .customer-back-btn:hover {
+  color: var(--ag-primary) !important;
+}
+
+.customer-details-page .customer-page-title {
+  margin-top: 6px !important;
+
+  color: #101828;
+
+  font-size: 25px !important;
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: -0.6px;
+}
+
+.customer-details-page .customer-admin-badge {
+  padding: 8px 14px !important;
+
+  border: 1px solid #d8e5ff;
+
+  border-radius: 999px;
+
+  background: #eef4ff;
+
+  color: #315fc4;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   CONTENT WRAPPER
+   ========================================================= */
+
+.customer-details-page .customer-details-content {
+  width: 100% !important;
+  max-width: 1600px;
+
+  margin: 0 auto !important;
+
+  padding: 32px 38px 60px !important;
+}
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.customer-details-page .customer-profile-card {
+  width: 100%;
+
+  min-height: 185px;
+
+  margin: 0 !important;
+  padding: 30px !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 24px;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #e5eaf1;
+  border-radius: 18px;
+
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(37, 99, 235, 0.12),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f9fbff
+    );
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.055);
+}
+
+.customer-details-page .customer-large-avatar {
+  width: 88px !important;
+  height: 88px !important;
+  min-width: 88px !important;
+
+  border-radius: 23px;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  ) !important;
+
+  color: #fff;
+
+  font-size: 32px;
+  font-weight: 800;
+
+  box-shadow:
+    0 14px 30px rgba(37, 99, 235, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.customer-details-page .customer-profile-info {
+  position: relative;
+  z-index: 2;
+}
+
+.customer-details-page .customer-profile-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #7b8798;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.customer-details-page .customer-profile-info h1 {
+  margin: 0 !important;
+
+  color: #111827;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  letter-spacing: -0.7px;
+}
+
+.customer-details-page .customer-profile-info p {
+  margin: 6px 0 13px !important;
+
+  color: #667085;
+
+  font-size: 14px;
+}
+
+.customer-details-page .customer-profile-meta {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  color: #718096;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.customer-details-page .customer-role-badge {
+  padding: 5px 10px !important;
+
+  border-radius: 999px;
+
+  background: #ecfdf3;
+
+  border: 1px solid #ccefd8;
+
+  color: #15803d;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.customer-details-page .customer-summary-grid {
+  width: 100%;
+
+  margin: 20px 0 0 !important;
+
+  display: grid !important;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.customer-details-page .customer-summary-card {
+  min-height: 110px;
+
+  margin: 0 !important;
+  padding: 20px !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 15px;
+
+  background: #fff !important;
+
+  border: 1px solid #e6eaf0;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 20px rgba(15, 23, 42, 0.035);
+
+  transition: 0.2s ease;
+}
+
+.customer-details-page .customer-summary-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.customer-details-page .customer-summary-card > span {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 13px;
+
+  background: #f1f5ff;
+
+  font-size: 21px;
+}
+
+.customer-details-page .customer-summary-card strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.customer-details-page .customer-summary-card small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #7b8798;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.customer-details-page .customer-details-panel {
+  width: 100%;
+
+  margin: 22px 0 0 !important;
+  padding: 0 !important;
+
+  background: #fff !important;
+
+  border: 1px solid #e5e9ef;
+
+  border-radius: 17px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 6px 25px rgba(15, 23, 42, 0.035);
+}
+
+.customer-details-page .customer-panel-header {
+  min-height: 82px;
+
+  margin: 0 !important;
+  padding: 20px 24px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.customer-details-page .customer-panel-header span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8490a3;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+.customer-details-page .customer-panel-header h2 {
+  margin: 0 !important;
+
+  color: #172033;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.customer-details-page .customer-panel-header > strong {
+  width: 32px;
+  height: 32px;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 9px;
+
+  background: #f1f5ff;
+
+  color: #315fc4;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.customer-details-page .customer-empty {
+  min-height: 120px;
+
+  padding: 30px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  color: #98a2b3;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   VEHICLES
+   ========================================================= */
+
+.customer-details-page .customer-vehicle-grid {
+  width: 100%;
+
+  padding: 22px !important;
+
+  display: grid !important;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.customer-details-page .customer-vehicle-card {
+  margin: 0 !important;
+  padding: 18px !important;
+
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 15px;
+
+  border: 1px solid #e8edf3;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    145deg,
+    #fff,
+    #f9fbfd
+  );
+
+  transition: 0.2s ease;
+}
+
+.customer-details-page .customer-vehicle-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbdaf8;
+
+  box-shadow:
+    0 8px 22px rgba(37, 99, 235, 0.08);
+}
+
+.customer-details-page .vehicle-icon {
+  width: 50px !important;
+  height: 50px !important;
+  min-width: 50px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 13px;
+
+  background: #eef4ff;
+
+  font-size: 22px;
+}
+
+.customer-details-page .customer-vehicle-card h3 {
+  margin: 0 !important;
+
+  color: #182230;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.customer-details-page .customer-vehicle-card p {
+  margin: 4px 0 !important;
+
+  color: #8a95a6;
+
+  font-size: 11px;
+}
+
+.customer-details-page .customer-vehicle-card strong {
+  color: #475467;
+
+  font-size: 11px;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+.customer-details-page .customer-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.customer-details-page .customer-details-table {
+  width: 100%;
+
+  min-width: 720px;
+
+  border-collapse: collapse;
+
+  border-spacing: 0;
+}
+
+.customer-details-page .customer-details-table thead {
+  background: #f8fafc;
+}
+
+.customer-details-page .customer-details-table th {
+  padding: 13px 20px;
+
+  border-bottom: 1px solid #e9edf2;
+
+  color: #8490a3;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+}
+
+.customer-details-page .customer-details-table td {
+  padding: 16px 20px;
+
+  border-bottom: 1px solid #f0f2f5;
+
+  color: #596579;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.customer-details-page .customer-details-table tbody tr:hover {
+  background: #fafcff;
+}
+
+.customer-details-page .customer-details-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.customer-details-page .customer-details-table td strong {
+  color: #1c2737;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.customer-details-page .customer-status {
+  display: inline-flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  min-width: 82px;
+
+  padding: 5px 9px !important;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+.customer-details-page .customer-status.pending {
+  color: #a16207;
+  background: #fef9c3;
+}
+
+.customer-details-page .customer-status.confirmed {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.customer-details-page .customer-status.assigned {
+  color: #6d28d9;
+  background: #ede9fe;
+}
+
+.customer-details-page .customer-status.received {
+  color: #0369a1;
+  background: #e0f2fe;
+}
+
+.customer-details-page .customer-status.inspection {
+  color: #7e22ce;
+  background: #f3e8ff;
+}
+
+.customer-details-page .customer-status.washing {
+  color: #0369a1;
+  background: #e0f2fe;
+}
+
+.customer-details-page .customer-status.drying {
+  color: #0f766e;
+  background: #ccfbf1;
+}
+
+.customer-details-page .customer-status.quality_check {
+  color: #4338ca;
+  background: #e0e7ff;
+}
+
+.customer-details-page .customer-status.completed {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.customer-details-page .customer-status.delivered {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.customer-details-page .customer-status.cancelled {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.customer-details-page .customer-status.success {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+/* =========================================================
+   REVIEWS
+   ========================================================= */
+
+.customer-details-page .customer-review-list {
+  padding: 22px !important;
+
+  display: grid !important;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.customer-details-page .customer-review-card {
+  margin: 0 !important;
+  padding: 19px !important;
+
+  border: 1px solid #e8edf3;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    145deg,
+    #fff,
+    #fafcff
+  );
+
+  transition: 0.2s ease;
+}
+
+.customer-details-page .customer-review-card:hover {
+  border-color: #d9e2f4;
+
+  box-shadow:
+    0 8px 22px rgba(15, 23, 42, 0.05);
+}
+
+.customer-details-page .review-rating {
+  margin-bottom: 10px;
+
+  color: #f59e0b;
+
+  font-size: 15px;
+
+  letter-spacing: 2px;
+}
+
+.customer-details-page .customer-review-card p {
+  margin: 0 0 12px !important;
+
+  color: #4b5565;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.customer-details-page .customer-review-card small {
+  color: #98a2b3;
+
+  font-size: 10px;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.customer-details-page .customer-details-loading {
+  width: calc(100% - 260px);
+
+  min-height: 100vh;
+
+  margin-left: 300px;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: var(--ag-bg);
+
+  color: #667085;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.customer-details-page .customer-details-error {
+  width: calc(100% - 260px);
+
+  min-height: 100vh;
+
+  margin-left: 300px;
+
+  padding: 40px;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  text-align: center;
+
+  background: var(--ag-bg);
+}
+
+.customer-details-page .customer-details-error h2 {
+  margin: 0 0 8px !important;
+
+  color: #172033;
+
+  font-size: 23px;
+
+  font-weight: 800;
+}
+
+.customer-details-page .customer-details-error p {
+  margin: 0 0 22px !important;
+
+  color: #7b8798;
+
+  font-size: 13px;
+}
+
+.customer-details-page .customer-details-error button {
+  padding: 11px 18px !important;
+
+  border: 0 !important;
+
+  border-radius: 9px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #4f46e5
+  ) !important;
+
+  color: #fff !important;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .customer-details-page .customer-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customer-details-page .customer-vehicle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .customer-details-page .admin-sidebar {
+    width: 230px !important;
+    min-width: 230px !important;
+  }
+
+  .customer-details-page .customer-details-main {
+    width: calc(100% - 230px) !important;
+    margin-left: 230px !important;
+  }
+
+  .customer-details-page .customer-details-content {
+    padding: 25px !important;
+  }
+
+  .customer-details-page .customer-details-topbar {
+    padding: 18px 25px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .customer-details-page .admin-sidebar {
+    width: 72px !important;
+    min-width: 72px !important;
+  }
+
+  .customer-details-page .admin-brand {
+    justify-content: center !important;
+    padding: 15px !important;
+  }
+
+  .customer-details-page .admin-brand > div:last-child {
+    display: none !important;
+  }
+
+  .customer-details-page .admin-nav-item {
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  .customer-details-page .admin-nav-item {
+    font-size: 0 !important;
+  }
+
+  .customer-details-page .admin-nav-item span {
+    font-size: 17px !important;
+  }
+
+  .customer-details-page .admin-nav-section {
+    display: none !important;
+  }
+
+  .customer-details-page .admin-logout {
+    justify-content: center !important;
+    padding: 0 !important;
+    font-size: 0 !important;
+  }
+
+  .customer-details-page .customer-details-main {
+    width: calc(100% - 72px) !important;
+    margin-left: 72px !important;
+  }
+
+  .customer-details-page .customer-summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .customer-details-page .customer-review-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .customer-details-page .customer-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-details-page .customer-profile-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .customer-details-page .customer-details-content {
+    padding: 18px !important;
+  }
+
+  .customer-details-page .customer-details-topbar {
+    padding: 15px 18px !important;
+  }
+
+  .customer-details-page .customer-page-title {
+    font-size: 21px !important;
+  }
+
+  .customer-details-page .customer-admin-badge {
+    display: none !important;
+  }
+}

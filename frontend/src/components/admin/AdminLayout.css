@@ -1,0 +1,81 @@
+/* =========================================
+   ADMIN LAYOUT
+========================================= */
+
+.admin-layout {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+
+/* =========================================
+   SIDEBAR OPEN
+========================================= */
+
+.admin-layout.sidebar-open .admin-sidebar {
+  width: 260px;
+}
+
+
+/* =========================================
+   SIDEBAR CLOSED
+========================================= */
+
+.admin-layout.sidebar-closed .admin-sidebar {
+  width: 0;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.admin-layout-content {
+  min-width: 0;
+  margin-left: 260px;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+
+/* SIDEBAR CLOSED */
+
+.admin-layout.sidebar-closed
+.admin-layout-content {
+  margin-left: 0;
+}
+
+
+/* =========================================
+   PAGE CONTENT
+========================================= */
+
+.admin-page-content {
+  padding: 28px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admin-layout.sidebar-open .admin-sidebar {
+    width: 260px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+
+  .admin-layout-content {
+    margin-left: 0;
+  }
+
+  .admin-page-content {
+    padding: 20px;
+  }
+}

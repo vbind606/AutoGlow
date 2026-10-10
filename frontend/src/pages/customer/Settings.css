@@ -1,0 +1,157 @@
+.settings-page {
+  min-height: 100vh;
+  padding: 35px;
+  background: #f5f7fb;
+}
+
+.settings-header {
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.settings-header > span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #526dff;
+}
+
+.settings-header h1 {
+  margin: 7px 0;
+  font-size: 32px;
+  color: #172033;
+}
+
+.settings-header p {
+  margin: 0;
+  color: #7b8498;
+}
+
+.settings-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.settings-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.07);
+}
+
+.settings-card-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.settings-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #eef1ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.settings-card h2 {
+  margin: 0 0 5px;
+  color: #172033;
+  font-size: 20px;
+}
+
+.settings-card p {
+  margin: 0;
+  color: #8991a3;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.settings-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #30394d;
+}
+
+.settings-field input {
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid #dfe3eb;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.settings-field input:focus {
+  border-color: #526dff;
+  box-shadow: 0 0 0 3px rgba(82, 109, 255, 0.1);
+}
+
+.password-button {
+  margin-top: 5px;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #526dff;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.password-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.settings-success {
+  background: #eaf8f0;
+  color: #218653;
+  border: 1px solid #c8edd8;
+  padding: 13px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+
+.settings-error {
+  background: #fff0f0;
+  color: #c53d3d;
+  border: 1px solid #ffd0d0;
+  padding: 13px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+
+.logout-button {
+  padding: 12px 25px;
+  border: 1px solid #e05252;
+  background: white;
+  color: #d63f3f;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #fff1f1;
+}
+
+.danger-card {
+  border: 1px solid #f0dddd;
+}
+
+@media (max-width: 700px) {
+  .settings-page {
+    padding: 20px;
+  }
+}

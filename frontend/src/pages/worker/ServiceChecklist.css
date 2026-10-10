@@ -1,0 +1,665 @@
+/* =========================================================
+   SERVICE CHECKLIST PAGE
+   AutoGlow - Worker Panel
+   ========================================================= */
+
+.service-checklist-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 30px;
+  color: #172033;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.checklist-loading {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.loading-spinner {
+  width: 42px;
+  height: 42px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: checklistSpin 0.8s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes checklistSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.checklist-topbar {
+  max-width: 1250px;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.checklist-topbar h1 {
+  margin: 12px 0 7px;
+  font-size: 30px;
+  font-weight: 750;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.checklist-topbar p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.back-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: #1d4ed8;
+}
+
+.booking-badge {
+  min-width: 135px;
+  padding: 13px 17px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  text-align: right;
+}
+
+.booking-badge span {
+  display: block;
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 4px;
+}
+
+.booking-badge strong {
+  color: #1e293b;
+  font-size: 17px;
+}
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+
+.success-alert,
+.error-alert {
+  max-width: 1250px;
+  margin: 0 auto 18px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.success-alert {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #047857;
+}
+
+.error-alert {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+/* =========================================================
+   PROGRESS CARD
+   ========================================================= */
+
+.progress-card {
+  max-width: 1250px;
+  margin: 0 auto 25px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 7px 25px rgba(15, 23, 42, 0.05);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.progress-label {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.progress-info h2 {
+  margin: 0;
+  font-size: 27px;
+  color: #111827;
+}
+
+.progress-percent {
+  font-size: 30px;
+  font-weight: 750;
+  color: #2563eb;
+}
+
+.progress-track {
+  width: 100%;
+  height: 9px;
+  margin-top: 18px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+.progress-card > p {
+  margin: 12px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+.checklist-section,
+.photos-section {
+  max-width: 1250px;
+  margin: 0 auto 25px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0 7px 25px rgba(15, 23, 42, 0.04);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+}
+
+.section-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  margin: 0 0 4px;
+  color: #111827;
+  font-size: 20px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================================
+   CHECKLIST GRID
+   ========================================================= */
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.checklist-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 78px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.checklist-item:hover {
+  border-color: #93c5fd;
+  background: #f8fbff;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.08);
+}
+
+.checklist-item.completed {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.checklist-item input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-checkbox {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.checklist-item.completed .custom-checkbox {
+  background: #16a34a;
+  border-color: #16a34a;
+}
+
+.task-number {
+  width: 30px;
+  flex-shrink: 0;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.task-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-content strong {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.task-content small {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.checklist-item.completed .task-content strong {
+  color: #166534;
+}
+
+/* =========================================================
+   PHOTOS
+   ========================================================= */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.photo-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 17px;
+  box-sizing: border-box;
+}
+
+.photo-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.photo-card-header h3 {
+  margin: 0 0 5px;
+  color: #1e293b;
+  font-size: 16px;
+}
+
+.photo-card-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.photo-tag {
+  flex-shrink: 0;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.photo-tag.after {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.photo-preview {
+  width: 100%;
+  height: 240px;
+  background: #e2e8f0;
+  border: 1px dashed #cbd5e1;
+  border-radius: 11px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.photo-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.empty-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+}
+
+.empty-photo span {
+  font-size: 36px;
+  margin-bottom: 7px;
+}
+
+.empty-photo p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.upload-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 13px;
+  padding: 0 15px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.upload-button:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+.upload-button input[type="file"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-button input[type="file"]:disabled {
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status-card {
+  max-width: 1250px;
+  margin: 0 auto 25px;
+  padding: 18px 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 7px 25px rgba(15, 23, 42, 0.04);
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.status-left span {
+  display: block;
+  color: #94a3b8;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 3px;
+}
+
+.status-left strong {
+  display: block;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.status-note {
+  color: #64748b;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.checklist-actions {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-bottom: 25px;
+}
+
+.secondary-action,
+.primary-action {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.secondary-action {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+}
+
+.secondary-action:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+
+.primary-action {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+.primary-action:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 18px rgba(37, 99, 235, 0.25);
+}
+
+.secondary-action:disabled,
+.primary-action:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .service-checklist-page {
+    padding: 20px;
+  }
+
+  .checklist-topbar {
+    flex-direction: column;
+  }
+
+  .booking-badge {
+    text-align: left;
+  }
+
+  .checklist-grid,
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .status-note {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-checklist-page {
+    padding: 14px;
+  }
+
+  .checklist-topbar h1 {
+    font-size: 24px;
+  }
+
+  .progress-card,
+  .checklist-section,
+  .photos-section {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .progress-percent {
+    font-size: 24px;
+  }
+
+  .checklist-item {
+    min-height: 70px;
+    padding: 12px;
+  }
+
+  .photo-preview {
+    height: 200px;
+  }
+
+  .checklist-actions {
+    flex-direction: column;
+  }
+
+  .secondary-action,
+  .primary-action {
+    width: 100%;
+  }
+}

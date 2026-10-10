@@ -1,0 +1,386 @@
+.washing-page {
+  min-height: 100vh;
+  padding: 40px;
+  background:
+    linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+  color: #172033;
+}
+
+.washing-header {
+  max-width: 1180px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.washing-eyebrow {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  color: #64748b;
+}
+
+.washing-header h1 {
+  margin: 8px 0 6px;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.washing-header p {
+  margin: 0;
+  color: #718096;
+  font-size: 15px;
+}
+
+.washing-back-btn {
+  border: 1px solid #d9e0e8;
+  background: #ffffff;
+  color: #334155;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.washing-back-btn:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+.washing-container {
+  max-width: 1180px;
+  margin: auto;
+  display: grid;
+  gap: 22px;
+}
+
+.washing-card {
+  background: #ffffff;
+  border: 1px solid #e4e9ef;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.section-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef4ff;
+  font-size: 22px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #7b8798;
+}
+
+.status-pill {
+  margin-left: auto;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #fff7df;
+  color: #a16207;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.vehicle-info {
+  background: #f8fafc;
+  border: 1px solid #edf0f4;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.vehicle-info span {
+  display: block;
+  color: #8a94a6;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.vehicle-info strong {
+  color: #263247;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 750;
+  color: #293548;
+}
+
+.form-group label span {
+  color: #ef4444;
+}
+
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dce2e9;
+  background: #fbfcfe;
+  border-radius: 11px;
+  padding: 13px 14px;
+  font-size: 14px;
+  color: #273449;
+  outline: none;
+  transition: 0.2s ease;
+  font-family: inherit;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #64748b;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.checklist-section {
+  margin: 5px 0 28px;
+}
+
+.checklist-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.checklist-title h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.checklist-title span {
+  color: #8993a4;
+  font-size: 12px;
+}
+
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.check-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid #e3e8ee;
+  border-radius: 13px;
+  background: #fafbfc;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.check-item:hover {
+  border-color: #bfc8d5;
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.check-item input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-check {
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
+  border: 2px solid #cbd3dd;
+  border-radius: 6px;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.check-item input:checked + .custom-check {
+  background: #1f2937;
+  border-color: #1f2937;
+}
+
+.check-item input:checked + .custom-check::after {
+  content: "✓";
+  position: absolute;
+  left: 3px;
+  top: -1px;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.check-item strong {
+  display: block;
+  font-size: 14px;
+  color: #273449;
+}
+
+.check-item small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #8b95a5;
+}
+
+.washing-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 22px;
+  border-top: 1px solid #edf0f4;
+}
+
+.cancel-btn,
+.save-washing-btn {
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cancel-btn {
+  border: 1px solid #d9e0e8;
+  background: #ffffff;
+  color: #475569;
+}
+
+.cancel-btn:hover {
+  background: #f8fafc;
+}
+
+.save-washing-btn {
+  border: none;
+  background: #172033;
+  color: white;
+  min-width: 220px;
+}
+
+.save-washing-btn:hover {
+  background: #0f172a;
+  transform: translateY(-1px);
+}
+
+.save-washing-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.washing-loading {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+.washing-spinner {
+  width: 38px;
+  height: 38px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #334155;
+  border-radius: 50%;
+  animation: washing-spin 0.8s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes washing-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .washing-page {
+    padding: 25px 18px;
+  }
+
+  .washing-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .vehicle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .checklist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .washing-header h1 {
+    font-size: 28px;
+  }
+
+  .washing-card {
+    padding: 20px;
+  }
+
+  .vehicle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .status-pill {
+    margin-left: auto;
+  }
+
+  .washing-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .save-washing-btn {
+    width: 100%;
+  }
+}

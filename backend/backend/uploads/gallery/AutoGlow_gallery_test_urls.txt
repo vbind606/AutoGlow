@@ -1,0 +1,13 @@
+AutoGlow Gallery Test Pack
+
+LOCAL TEST IMAGES:
+The JPG files in this ZIP are local test images created specifically to test
+your multipart upload. They are safe to upload to uploads/gallery/.
+
+REAL WEB IMAGE URLS:
+1. https://www.mr-shine.com/pillars/exterior-detailing.jpg
+2. https://detailingessentials.in/cdn/shop/files/ChatGPT_Image_May_21_2026_04_27_09_PM.png?v=1779361443&width=1500
+3. https://www.autoreinigung-noack.de/images/keramikversiegelung_auto.jpg
+4. https://eastline-garage.ru/images/Motodeteyling/EG-113_result.jpg
+
+You can paste these URLs into imageUrl if your Gallery form supports URL-based images.

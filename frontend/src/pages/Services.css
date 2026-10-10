@@ -1,0 +1,1255 @@
+/* =========================================================
+   AUTOGLOW SERVICES PAGE
+========================================================= */
+
+.services-page {
+  min-height: 100vh;
+  background: #f6f8fc;
+  color: #0b1f3a;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.services-hero {
+  min-height: 520px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 20, 42, 0.96),
+      rgba(5, 20, 42, 0.78),
+      rgba(5, 20, 42, 0.35)
+    ),
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=85")
+    center / cover no-repeat;
+}
+
+.services-hero-overlay {
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+}
+
+.services-hero-content {
+  width: 1180px;
+  max-width: calc(100% - 80px);
+
+  margin: 0 auto;
+
+  color: white;
+}
+
+.services-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 9px 14px;
+
+  margin-bottom: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  color: #dcecff;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.services-hero h1 {
+  max-width: 760px;
+
+  margin: 0;
+
+  font-size: 62px;
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+.services-hero h1 span {
+  display: block;
+  color: #5fa8ff;
+}
+
+.services-hero p {
+  max-width: 610px;
+
+  margin: 26px 0 32px;
+
+  color: #d6e2f1;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-book-button,
+.hero-explore-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 14px 21px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.hero-book-button {
+  background: #1769e0;
+  color: white;
+}
+
+.hero-book-button:hover {
+  background: #0d55bd;
+  transform: translateY(-2px);
+}
+
+.hero-explore-button {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+}
+
+.hero-explore-button:hover {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.services-intro {
+  padding: 90px 20px 70px;
+
+  background: white;
+}
+
+.section-heading {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.section-heading > span {
+  color: #1769e0;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.section-heading h2 {
+  margin: 14px 0 18px;
+
+  font-size: 42px;
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+.section-heading h2 strong {
+  color: #1769e0;
+}
+
+.section-heading p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #6c7b8f;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.services-container {
+  width: 1180px;
+
+  max-width: calc(100% - 80px);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SERVICES SECTION
+========================================================= */
+
+.services-section {
+  padding: 85px 0 100px;
+
+  background: #f6f8fc;
+}
+
+.services-section-header,
+.packages-section-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: end;
+
+  gap: 40px;
+
+  margin-bottom: 40px;
+}
+
+.services-section-header > div > span,
+.packages-section-header > div > span {
+  color: #1769e0;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.services-section-header h2,
+.packages-section-header h2 {
+  margin: 10px 0 0;
+
+  font-size: 38px;
+
+  letter-spacing: -1px;
+}
+
+.services-section-header > p,
+.packages-section-header > p {
+  max-width: 360px;
+
+  margin: 0;
+
+  color: #718096;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+  overflow: hidden;
+
+  background: white;
+
+  border: 1px solid #e4eaf2;
+
+  box-shadow: 0 12px 35px rgba(20, 45, 80, 0.055);
+
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #bfd7f7;
+
+  box-shadow: 0 20px 45px rgba(20, 45, 80, 0.11);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.service-card-top {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 25px 25px 0;
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #edf5ff;
+
+  border-radius: 12px;
+
+  font-size: 28px;
+}
+
+.service-status {
+  padding: 6px 9px;
+
+  border-radius: 20px;
+
+  background: #ecf9f1;
+
+  color: #16844c;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.service-card-content {
+  padding: 24px 25px 25px;
+}
+
+.service-title-row {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.service-title-row h3 {
+  margin: 0;
+
+  font-size: 21px;
+
+  line-height: 1.3;
+}
+
+.service-vehicle-badge {
+  flex-shrink: 0;
+
+  padding: 5px 8px;
+
+  background: #f1f4f8;
+
+  color: #5d6d80;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  border-radius: 5px;
+}
+
+.service-description {
+  min-height: 68px;
+
+  margin: 12px 0 0;
+
+  color: #718096;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   SERVICE INFO
+========================================================= */
+
+.service-info {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin: 22px 0 16px;
+
+  padding: 17px 0;
+
+  border-top: 1px solid #e8edf3;
+
+  border-bottom: 1px solid #e8edf3;
+}
+
+.service-info div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.service-info small {
+  color: #8491a3;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.service-info strong {
+  color: #0b1f3a;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   VEHICLE TYPE
+========================================================= */
+
+.vehicle-type {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 18px;
+
+  padding: 9px 11px;
+
+  background: #f6f8fb;
+
+  color: #65758a;
+
+  font-size: 12px;
+}
+
+.vehicle-type strong {
+  color: #0b1f3a;
+}
+
+
+/* =========================================================
+   SERVICE BUTTON
+========================================================= */
+
+.service-book-btn {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 16px;
+
+  background: #0b1f3a;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.service-book-btn:hover {
+  background: #1769e0;
+}
+
+
+/* =========================================================
+   PACKAGES
+========================================================= */
+
+.packages-section {
+  padding: 100px 0;
+
+  background: #0b1f3a;
+
+  color: white;
+}
+
+.packages-section-header > div > span {
+  color: #5fa8ff;
+}
+
+.packages-section-header h2 {
+  color: white;
+}
+
+.packages-section-header h2 strong {
+  color: #5fa8ff;
+}
+
+.packages-section-header > p {
+  color: #aebed2;
+}
+
+
+/* =========================================================
+   PACKAGES GRID
+========================================================= */
+
+.packages-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   PACKAGE CARD
+========================================================= */
+
+.package-card {
+  position: relative;
+
+  padding: 30px;
+
+  background: #122b4d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s;
+}
+
+.package-card:hover {
+  transform: translateY(-7px);
+
+  background: #163456;
+}
+
+.featured-package {
+  background: #1769e0;
+
+  border-color: #1769e0;
+}
+
+.featured-package:hover {
+  background: #1b70e9;
+}
+
+
+/* =========================================================
+   POPULAR
+========================================================= */
+
+.popular-package {
+  position: absolute;
+
+  top: 0;
+  right: 25px;
+
+  padding: 7px 11px;
+
+  background: white;
+
+  color: #1769e0;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   PACKAGE HEADER
+========================================================= */
+
+.package-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.package-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  border-radius: 10px;
+
+  font-size: 22px;
+}
+
+.package-vehicle {
+  padding: 6px 9px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #b9cbe0;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.featured-package .package-vehicle {
+  background: rgba(255, 255, 255, 0.18);
+
+  color: white;
+}
+
+
+/* =========================================================
+   PACKAGE TEXT
+========================================================= */
+
+.package-number {
+  display: block;
+
+  margin-top: 24px;
+
+  color: #82b7f5;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.featured-package .package-number {
+  color: #dcecff;
+}
+
+.package-card h3 {
+  margin: 10px 0 12px;
+
+  font-size: 27px;
+}
+
+.package-description {
+  min-height: 70px;
+
+  margin: 0;
+
+  color: #b9c8da;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+.featured-package .package-description {
+  color: #e1edfb;
+}
+
+
+/* =========================================================
+   PACKAGE PRICE
+========================================================= */
+
+.package-price {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  margin: 25px 0;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.package-price small {
+  color: #91a6bf;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.featured-package .package-price small {
+  color: #d6e9ff;
+}
+
+.package-price strong {
+  font-size: 38px;
+}
+
+
+/* =========================================================
+   PACKAGE INFO
+========================================================= */
+
+.package-info {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+.package-info div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.package-info span {
+  color: #91a6bf;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.featured-package .package-info span {
+  color: #d5e8ff;
+}
+
+.package-info strong {
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   PACKAGE VEHICLE
+========================================================= */
+
+.package-vehicle-info {
+  margin-bottom: 20px;
+
+  padding: 10px 12px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #b9c8da;
+
+  font-size: 12px;
+}
+
+.featured-package .package-vehicle-info {
+  background: rgba(255, 255, 255, 0.12);
+
+  color: white;
+}
+
+.package-vehicle-info strong {
+  color: white;
+}
+
+
+/* =========================================================
+   PACKAGE BUTTON
+========================================================= */
+
+.package-book-btn {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 16px;
+
+  background: white;
+
+  color: #0b1f3a;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition: 0.25s;
+}
+
+.package-book-btn:hover {
+  background: #eaf2fc;
+}
+
+
+/* =========================================================
+   WHY AUTOGLOW
+========================================================= */
+
+.why-autoglow {
+  padding: 100px 0;
+
+  background: white;
+}
+
+.why-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-top: 50px;
+}
+
+.why-card {
+  padding: 28px;
+
+  background: #f7f9fc;
+
+  border: 1px solid #e7ecf3;
+
+  transition: 0.25s;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c7dcf7;
+}
+
+.why-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background: #eaf3ff;
+
+  border-radius: 10px;
+
+  font-size: 24px;
+}
+
+.why-card h3 {
+  margin: 0 0 10px;
+
+  font-size: 18px;
+}
+
+.why-card p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.services-cta {
+  min-height: 430px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 20px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(7, 28, 53, 0.93),
+      rgba(7, 28, 53, 0.93)
+    ),
+    url("https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1800&q=85")
+    center / cover no-repeat;
+}
+
+.services-cta-content {
+  max-width: 800px;
+
+  color: white;
+}
+
+.services-cta-content > span {
+  color: #5fa8ff;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.services-cta h2 {
+  margin: 18px 0;
+
+  font-size: 48px;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+}
+
+.services-cta h2 strong {
+  color: #5fa8ff;
+}
+
+.services-cta p {
+  margin-bottom: 30px;
+
+  color: #c4d2e2;
+
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 15px 24px;
+
+  background: #1769e0;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.cta-button:hover {
+  background: #0d55bd;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.services-loading {
+  min-height: 350px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 20px;
+
+  background: #f6f8fc;
+
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 18px;
+
+  border: 3px solid #dce6f2;
+
+  border-top-color: #1769e0;
+
+  border-radius: 50%;
+
+  animation: autoglow-spin 0.8s linear infinite;
+}
+
+@keyframes autoglow-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.services-loading h3 {
+  margin: 0 0 7px;
+
+  font-size: 18px;
+}
+
+.services-loading p {
+  margin: 0;
+
+  color: #718096;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.services-error {
+  min-height: 350px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 20px;
+
+  background: #f6f8fc;
+
+  text-align: center;
+}
+
+.error-icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  background: #fff4e5;
+
+  border-radius: 50%;
+
+  font-size: 24px;
+}
+
+.services-error h3 {
+  margin: 0 0 8px;
+}
+
+.services-error p {
+  max-width: 500px;
+
+  margin: 0 0 20px;
+
+  color: #718096;
+}
+
+
+/* =========================================================
+   RETRY
+========================================================= */
+
+.retry-button {
+  padding: 12px 23px;
+
+  border: none;
+
+  background: #1769e0;
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  transition: 0.25s;
+}
+
+.retry-button:hover {
+  background: #0d55bd;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.no-services,
+.no-packages {
+  padding: 60px 25px;
+
+  text-align: center;
+
+  background: white;
+
+  border: 1px solid #e4eaf2;
+}
+
+.no-packages {
+  background: #122b4d;
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.empty-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 15px;
+
+  background: #edf5ff;
+
+  border-radius: 12px;
+
+  font-size: 25px;
+}
+
+.no-services h3,
+.no-packages h3 {
+  margin: 0 0 8px;
+}
+
+.no-services p {
+  margin: 0;
+
+  color: #718096;
+}
+
+.no-packages p {
+  margin: 0;
+
+  color: #aebed2;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .services-grid,
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-hero h1 {
+    font-size: 52px;
+  }
+}
+
+
+@media (max-width: 760px) {
+
+  .services-container {
+    max-width: calc(100% - 35px);
+  }
+
+  .services-hero-content {
+    max-width: calc(100% - 35px);
+  }
+
+  .services-hero,
+  .services-hero-overlay {
+    min-height: 500px;
+  }
+
+  .services-hero h1 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+  }
+
+  .services-hero p {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .services-section-header,
+  .packages-section-header {
+    display: block;
+  }
+
+  .services-section-header > p,
+  .packages-section-header > p {
+    margin-top: 15px;
+  }
+
+  .services-grid,
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .services-section-header h2,
+  .packages-section-header h2 {
+    font-size: 32px;
+  }
+
+  .services-cta h2 {
+    font-size: 36px;
+  }
+}

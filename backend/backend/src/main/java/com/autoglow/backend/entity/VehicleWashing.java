@@ -1,0 +1,155 @@
+package com.autoglow.backend.entity;
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "vehicle_washings")
+public class VehicleWashing {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "booking_id", nullable = false, unique = true)
+    private Booking booking;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "worker_id", nullable = false)
+    private Worker worker;
+
+    @Column(nullable = false)
+    private String washType;
+
+    private boolean exteriorWash;
+    private boolean interiorCleaning;
+    private boolean foamWash;
+    private boolean pressureWash;
+    private boolean wheelCleaning;
+    private boolean glassCleaning;
+    private boolean vacuumCleaning;
+    private boolean polishApplied;
+
+    @Column(length = 1000)
+    private String washingNotes;
+
+    private LocalDateTime startedAt;
+    private LocalDateTime completedAt;
+
+    public Long getId() {
+        return id;
+    }
+
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
+    }
+
+    public Worker getWorker() {
+        return worker;
+    }
+
+    public void setWorker(Worker worker) {
+        this.worker = worker;
+    }
+
+    public String getWashType() {
+        return washType;
+    }
+
+    public void setWashType(String washType) {
+        this.washType = washType;
+    }
+
+    public boolean isExteriorWash() {
+        return exteriorWash;
+    }
+
+    public void setExteriorWash(boolean exteriorWash) {
+        this.exteriorWash = exteriorWash;
+    }
+
+    public boolean isInteriorCleaning() {
+        return interiorCleaning;
+    }
+
+    public void setInteriorCleaning(boolean interiorCleaning) {
+        this.interiorCleaning = interiorCleaning;
+    }
+
+    public boolean isFoamWash() {
+        return foamWash;
+    }
+
+    public void setFoamWash(boolean foamWash) {
+        this.foamWash = foamWash;
+    }
+
+    public boolean isPressureWash() {
+        return pressureWash;
+    }
+
+    public void setPressureWash(boolean pressureWash) {
+        this.pressureWash = pressureWash;
+    }
+
+    public boolean isWheelCleaning() {
+        return wheelCleaning;
+    }
+
+    public void setWheelCleaning(boolean wheelCleaning) {
+        this.wheelCleaning = wheelCleaning;
+    }
+
+    public boolean isGlassCleaning() {
+        return glassCleaning;
+    }
+
+    public void setGlassCleaning(boolean glassCleaning) {
+        this.glassCleaning = glassCleaning;
+    }
+
+    public boolean isVacuumCleaning() {
+        return vacuumCleaning;
+    }
+
+    public void setVacuumCleaning(boolean vacuumCleaning) {
+        this.vacuumCleaning = vacuumCleaning;
+    }
+
+    public boolean isPolishApplied() {
+        return polishApplied;
+    }
+
+    public void setPolishApplied(boolean polishApplied) {
+        this.polishApplied = polishApplied;
+    }
+
+    public String getWashingNotes() {
+        return washingNotes;
+    }
+
+    public void setWashingNotes(String washingNotes) {
+        this.washingNotes = washingNotes;
+    }
+
+    public LocalDateTime getStartedAt() {
+        return startedAt;
+    }
+
+    public void setStartedAt(LocalDateTime startedAt) {
+        this.startedAt = startedAt;
+    }
+
+    public LocalDateTime getCompletedAt() {
+        return completedAt;
+    }
+
+    public void setCompletedAt(LocalDateTime completedAt) {
+        this.completedAt = completedAt;
+    }
+}
