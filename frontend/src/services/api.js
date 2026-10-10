@@ -1,13 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: `${import.meta.env.VITE_API_URL || "http://localhost:8080"}/api`,
   timeout: 15000,
 });
 
-// ==========================================
-// REQUEST INTERCEPTOR
-// ==========================================
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("autoglow_token");
@@ -25,9 +22,6 @@ api.interceptors.request.use(
   (error) => Promise.reject(error),
 );
 
-// ==========================================
-// RESPONSE INTERCEPTOR
-// ==========================================
 api.interceptors.response.use(
   (response) => {
     console.log(
@@ -45,9 +39,6 @@ api.interceptors.response.use(
       error.response?.data || error.message,
     );
 
-    // IMPORTANT:
-    // Login ke 401/403 par token clear karna theek hai,
-    // lekin login request ko redirect/force logout nahi karna.
     if (error.response?.status === 401 || error.response?.status === 403) {
       localStorage.removeItem("autoglow_token");
       localStorage.removeItem("autoglow_role");
