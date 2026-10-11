@@ -34,22 +34,51 @@ public class AuthService {
 
     public String register(RegisterRequest request) {
 
+        // Validate request
+        if (request.getName() == null
+                || request.getName().trim().isEmpty()) {
+            return "Name is required";
+        }
+
+        if (request.getEmail() == null
+                || request.getEmail().trim().isEmpty()) {
+            return "Email is required";
+        }
+
+        if (request.getPassword() == null
+                || request.getPassword().length() < 6) {
+            return "Password must be at least 6 characters";
+        }
+
         // Check duplicate email
-        if (userRepository.existsByEmail(request.getEmail())) {
+        String email = request.getEmail().trim();
+
+        if (userRepository.existsByEmail(email)) {
             return "Email already registered";
+        }
+
+        // Assign selected role
+        Role role = Role.CUSTOMER;
+
+        if (request.getRole() != null
+                && !request.getRole().trim().isEmpty()) {
+
+            try {
+                role = Role.valueOf(
+                        request.getRole().trim().toUpperCase());
+            } catch (IllegalArgumentException e) {
+                return "Invalid role. Choose CUSTOMER, ADMIN or WORKER";
+            }
         }
 
         // Create new user
         User user = new User();
 
-        user.setName(request.getName());
-        user.setEmail(request.getEmail());
-
+        user.setName(request.getName().trim());
+        user.setEmail(email);
         user.setPassword(
                 passwordEncoder.encode(request.getPassword()));
-
-        // Public registration = CUSTOMER
-        user.setRole(Role.CUSTOMER);
+        user.setRole(role);
 
         // Save user
         userRepository.save(user);
@@ -68,12 +97,8 @@ public class AuthService {
                 .findByEmail(request.getEmail())
                 .orElse(null);
 
-        // =========================================
-        // USER NOT FOUND
-        // =========================================
-
+        // User not found
         if (user == null) {
-
             return new LoginResponse(
                     "Invalid email or password",
                     null,
@@ -83,10 +108,7 @@ public class AuthService {
                     null);
         }
 
-        // =========================================
-        // PASSWORD CHECK
-        // =========================================
-
+        // Password check
         if (!passwordEncoder.matches(
                 request.getPassword(),
                 user.getPassword())) {
@@ -100,24 +122,15 @@ public class AuthService {
                     null);
         }
 
-        // =========================================
-        // CHECK USER ROLE
-        // =========================================
-
+        // Handle old user records without a role
         if (user.getRole() == null) {
-
-            // Old/broken user record
             user.setRole(Role.CUSTOMER);
-
             userRepository.save(user);
         }
 
         String role = user.getRole().name();
 
-        // =========================================
-        // DEBUG
-        // =========================================
-
+        // Login debug information
         System.out.println("====================================");
         System.out.println("AUTO GLOW LOGIN");
         System.out.println("User ID : " + user.getId());
@@ -126,18 +139,12 @@ public class AuthService {
         System.out.println("Role    : " + role);
         System.out.println("====================================");
 
-        // =========================================
-        // GENERATE JWT
-        // =========================================
-
+        // Generate JWT
         String token = jwtService.generateToken(
                 user.getEmail(),
                 role);
 
-        // =========================================
-        // LOGIN RESPONSE
-        // =========================================
-
+        // Return login response
         return new LoginResponse(
                 "Login successful",
                 token,
@@ -146,6 +153,7 @@ public class AuthService {
                 user.getName(),
                 user.getEmail());
     }
+
     // =========================================
     // CHANGE PASSWORD
     // =========================================
@@ -163,16 +171,18 @@ public class AuthService {
             return "User not found";
         }
 
-        // Check current password
-        if (!passwordEncoder.matches(
-                currentPassword,
-                user.getPassword())) {
+        // Validate current password
+        if (currentPassword == null
+                || !passwordEncoder.matches(
+                        currentPassword,
+                        user.getPassword())) {
 
             return "Current password is incorrect";
         }
 
-        // Basic validation
-        if (newPassword == null || newPassword.trim().isEmpty()) {
+        // Validate new password
+        if (newPassword == null
+                || newPassword.trim().isEmpty()) {
             return "New password cannot be empty";
         }
 
